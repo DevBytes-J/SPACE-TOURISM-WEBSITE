@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 
+export default function Destination() {
 const destinations = [
   {
     name: "MOON",
@@ -35,8 +37,6 @@ const destinations = [
     travel: "7 YEARS",
   },
 ];
-
-const App: React.FC = () => {
   const [activeDestination, setActiveDestination] = useState(destinations[0]);
 
   return (
@@ -47,9 +47,9 @@ const App: React.FC = () => {
     bg-cover bg-center h-screen w-full text-white"
     >
       <Navbar />
-      {/* Main Content */}
+
       <div className="flex flex-col ">
-        <p className="font-barlow-condensed tracking-widest uppercase text-center sm:text-left my-4 sm:pl-8 lg:pl-25">
+        <p className="font-barlow-condensed tracking-widest uppercase text-center sm:text-left my-8 sm:pl-8 lg:pl-25">
           <span className="opacity-25 mr-4 text-left">01</span>PICK YOUR
           DESTINATION
         </p>
@@ -70,7 +70,7 @@ const App: React.FC = () => {
                   className={`uppercase border-b-2 transition-colors duration-300 cursor-pointer ${
                     activeDestination.name === dest.name
                       ? "text-white border-white"
-                      : "text-gray-400 border-transparent hover:border-gray-500"
+                      : "text-[#D0D6f9] border-transparent hover:border-gray-500"
                   }`}
                 >
                   {dest.name}
@@ -81,26 +81,27 @@ const App: React.FC = () => {
               <h2 className="text-[44px] lg:text-[64px] font-bellefair uppercase tracking-widest text-center lg:text-left my-2">
                 {activeDestination.name}
               </h2>
-              <p
-                className="text-gray-300 text-[10px] sm:text-[12px] leading-relaxed max-w-md text-center lg:text-left w-[90%]"
-              >
+              <p className="text-gray-300 text-[10px] sm:text-[12px] leading-relaxed max-w-md text-center lg:text-left w-[90%]">
                 {activeDestination.description}
               </p>
               <div className="w-full h-px bg-white/25 my-4 mt-8"></div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-10 items-center justify-center sm:justify-between lg:justify-start sm:p-5 lg:p-0 p-0">
+            <div className="flex flex-col sm:flex-row gap-7 items-center justify-center sm:justify-between lg:justify-start sm:px-20 lg:p-0 p-0">
               <div className="text-center lg:text-start">
-                <p className="font-barlow-condensed text-[#D0D6F9] text-[11px]">
-                  AVG. DISTANCE
+                <p className="font-barlow-condensed text-[#D0D6F9] text-[12px] flex flex-row gap-3 items-center justify-center lg:justify-start">
+                  <span> AVG.</span>
+                  <span> DISTANCE</span>
                 </p>
                 <p className="text-white text-[12px] sm:text-[24px] font-bellefair">
                   {activeDestination.distance}
                 </p>
               </div>
               <div className="text-center lg:text-start">
-                <p className="font-barlow-condensed text-[#D0D6F9] text-[11px] sm:text-[12px]">
-                  EST. TRAVEL TIME
+                <p className="font-barlow-condensed text-[#D0D6F9] text-[18px] sm:text-[12px] flex flex-row gap-3">
+                  <span>EST.</span>
+                  <span>TRAVEL </span>
+                  <span>TIME</span>
                 </p>
                 <p className="text-white text-[14px] sm:text-[24px] font-bellefair">
                   {activeDestination.travel}
@@ -114,4 +115,3 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
