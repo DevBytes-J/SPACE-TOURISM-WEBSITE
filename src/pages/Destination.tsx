@@ -54,15 +54,15 @@ const destinations = [
           DESTINATION
         </p>
 
-        <div className="flex flex-col lg:flex-row w-full justify-between mt-2 lg:mt-14 lg:px-40 items-center lg:items-start lg:gap-30">
+        <div className="flex flex-col lg:flex-row w-full lg:gap-40 mt-2 lg:mt-14 lg:px-30 items-center lg:items-start ">
           <img
             src={activeDestination.image}
             alt={activeDestination.name}
-            className="w-[150px] sm:w-[200px] lg:w-[445px] object-contain mx-auto"
+            className="w-[150px] sm:w-[200px] lg:w-[550px] object-contain "
           />
 
           <div>
-            <div className="flex flex-row items-center lg:items-start gap-6 font-light justify-center lg:justify-start mt-14 font-barlow-condensed text-[12px] sm:text-[14px]">
+            <div className="flex flex-row items-center lg:items-start gap-6 font-light justify-center lg:justify-start mt-14 font-barlow-condensed text-[12px] sm:text-[18px]">
               {destinations.map((dest) => (
                 <button
                   key={dest.name}
@@ -78,10 +78,10 @@ const destinations = [
               ))}
             </div>
             <div className="lg:px-0 mt-3 w-[100%] sm:w-[100%] justify-center flex flex-col items-center lg:items-start px-8">
-              <h2 className="text-[44px] lg:text-[64px] font-bellefair uppercase tracking-widest text-center lg:text-left my-2">
+              <h2 className="text-[44px] lg:text-[90px] font-bellefair uppercase tracking-widest text-center lg:text-left my-2">
                 {activeDestination.name}
               </h2>
-              <p className="text-gray-300 text-[10px] sm:text-[12px] leading-relaxed max-w-md text-center lg:text-left w-[90%]">
+              <p className="text-[#D0D6F9] text-[10px] font-barlow sm:text-[18px] leading-relaxed max-w-md text-center lg:text-left w-[90%] lg:w-full">
                 {activeDestination.description}
               </p>
               <div className="w-full h-px bg-white/25 my-4 mt-8"></div>

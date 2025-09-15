@@ -48,20 +48,18 @@ export default function CrewPage() {
       className=" bg-[url('/assets/crew/background-crew-mobile.jpg')] 
       sm:bg-[url('/assets/crew/background-crew-tablet.jpg')] 
       lg:bg-[url('/assets/crew/background-crew-desktop.jpg')] 
-      bg-cover bg-center min-h-screen w-full text-white"
+      bg-cover bg-center min-h-screen w-full text-white h-screen"
     >
       <Navbar />
 
       <div className="flex flex-col">
-
         <h1 className="font-light tracking-widest uppercase mt-8 sm:mt-11 text-center sm:text-left font-barlow-condensed sm:pl-8 lg:pl-40">
           <span className="font-bold opacity-25 mr-4">02</span>MEET YOUR CREW
         </h1>
 
         <div className="flex flex-col lg:flex-row w-full lg:justify-between lg:px-40 lg:items-center gap-12 px-6 mt-10">
-
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left lg:w-[45%] order-1 lg:order-none">
-            <div className="font-bellefair">
+            <div className="font-bellefair lg:mt-50">
               <h3 className="text-[20px] sm:text-[24px] lg:text-[28px] font-light uppercase opacity-50 mb-2">
                 {activeCrewMember.role}
               </h3>
@@ -73,7 +71,7 @@ export default function CrewPage() {
               </p>
             </div>
 
-            <div className="flex gap-5 mt-6 sm:mt-10 lg:mt-12 cursor-pointer">
+            <div className="flex gap-5 mt-6 sm:mt-10 lg:mt-40 cursor-pointer">
               {crewMembers.map((member, index) => (
                 <button
                   key={index}
@@ -88,14 +86,14 @@ export default function CrewPage() {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-end items-center w-full lg:w-[50%] order-2 lg:order-none">
+          <div className="flex justify-center lg:justify-end items-center w-full lg:w-[50%] order-2 lg:order-none mb-3">
             <picture>
               <source srcSet={activeCrewMember.image.webp} type="image/webp" />
               <source srcSet={activeCrewMember.image.png} type="image/png" />
               <img
                 src={activeCrewMember.image.png}
                 alt={activeCrewMember.name}
-                className="object-contain w-full max-w-[350px] sm:max-w-[400px] lg:max-w-[400px] h-auto"
+                className="object-contain w-full max-w-[350px] sm:max-w-[400px] lg:max-w-[500px] h-auto"
               />
             </picture>
           </div>

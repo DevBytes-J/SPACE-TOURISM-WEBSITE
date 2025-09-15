@@ -36,7 +36,7 @@ export default function Navbar() {
                 <NavLink
                   to={item.path}
                   className={({ isActive }) =>
-                    `flex items-center gap-2 cursor-pointer uppercase py-5 transition-colors duration-300 ${
+                    `flex items-center gap-2 cursor-pointer uppercase py-9 transition-colors duration-300 ${
                       isActive ? "text-white" : "text-white hover:text-gray-400"
                     }`
                   }
